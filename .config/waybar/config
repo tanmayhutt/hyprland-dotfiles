@@ -1,0 +1,73 @@
+{
+  "spacing": 10,
+  "height": 33,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-right": ["network", "bluetooth", "custom/audio", "battery", "cpu", "memory", "custom/clipboard", "clock"],
+
+
+  "network": {
+    "format-wifi": "{essid} ",
+    "format-ethernet": "{ipaddr} ",
+    "format-disconnected": "Disconnected   ⚠",
+    "tooltip": false,
+    "on-click": "alacritty -e nmtui"
+  },
+
+  "bluetooth": {
+    "format": "{device_alias} ",
+    "format-disconnected": "No Device ⚠",
+    "tooltip": false,
+    "on-click": "blueman-manager"
+  },
+
+  "custom/audio": {
+  "exec": "wpctl status | sed -n '/Sinks:/,/Sources:/p' | grep '\\*' | head -n 1 | awk '{$1=$2=\"\"; sub(/^[ \\t]+/, \"\"); sub(/\\s+\\[.*$/, \"\"); print}'",
+  "interval": 5,
+  "format": "{}  ",
+  "tooltip": false,
+  "on-click": "pavucontrol"
+  },
+
+  "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon} ",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "xfce4-power-manager-settings"
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false,
+    "on-click": "foot btop"
+  },
+
+  "memory": {
+    "format": "{used:0.1f}GB/7.5GB ",
+    "tooltip": false,
+    "on-click": "foot btop"
+  },
+
+  "custom/clipboard": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "copyq show"
+  },
+
+  "clock": {
+    "format": "{:%a %d %b %I:%M %p}",
+    "tooltip": false,
+    "on-click": "gsimplecal"
+  }
+}
