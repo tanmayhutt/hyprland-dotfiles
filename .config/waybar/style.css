@@ -1,74 +1,9 @@
-* {
-  font-family: 'SF Pro Text', sans-serif;
-  font-size: 13px;
-}
-
-window#waybar {
-  background-color: rgb(9,15,10);
-  color: #d3c6aa;
-}
-
-#workspaces button {
-  padding: 0 6px;
-  background-color: #345d38;
-  color: #dfece0;
-}
-
-#workspaces button.active {
-  color: #dfece0;
-  background-color: #345d38;
-}
-
-#network, #bluetooth, #custom-audio, #battery, #cpu, #memory, #custom-clipboard, #clock {
-  padding: 0 10px;
-  margin-top: 3px;
-  margin-bottom: 3px;
-  border-radius: 4px;
-  color: #ffffff;
-}
-
-#network {
-  background-color: #345d38;
-  color: #dfece0;
-}
-
-#custom-audio {
-  background-color: #345d38;
-  color: #dfece0;
-  padding: 4px 8px;
-  border-radius: 6px;
-  margin: 2px 4px;
-}
-
-
-#bluetooth {
-  background-color: #345d38;
-  color: #dfece0;
-}
-
-#battery {
-  background-color: #345d38;
-  color: #dfece0;
-}
-
-#cpu {
-  background-color: #345d38;
-  color: #dfece0;
-}
-
-#memory {
-  background-color: #345d38;
-  color: #dfece0;
-}
-
-#custom-clipboard {
-  background-color: #345d38;
-  color: #dfece0;
-}
-
-#clock {
-  background-color: #345d38;
-  color: #dfece0;
-}
-
-
+xclip -o > style.css
+# OR if xclip isn't installed:
+# If using Wayland:
+# wl-paste > style.css
+# If using Xorg and xclip isn't working:
+# gnome-terminal (or your terminal emulator) often allows pasting with Shift+Ctrl+V
+# In that case, you'd type:
+# cat > style.css
+# THEN paste the content (Shift+Ctrl+V), THEN press Ctrl+D (to signal end of input)
