@@ -105,12 +105,6 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 export PATH=$PATH:~/.local/bin
 
-export QT_QPA_PLATFORMTHEME=qt5ct
-export QT_STYLE_OVERRIDE=kvantum
-
-
-export GTK_THEME=Graphite-Dark
-export QT_QPA_PLATFORMTHEME=gtk3
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -130,23 +124,8 @@ precmd_functions+=(jesse_quote)
 
 
 
-[ -f "$HOME/.cache/wal/colors.zsh" ] && source "$HOME/.cache/wal/colors.zsh"
-
-
-wal -R
-
-
-
-
-
-
-
 
 
 #ai
 export OPENAI_API_KEY="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"
-
-
-
-
 

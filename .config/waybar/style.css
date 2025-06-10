@@ -1,6 +1,76 @@
-xclip -o > style.css
-# OR if xclip isn't installed and you're on Wayland (like Hyprland):
-# wl-paste > style.css
-# OR if you're on Xorg and xclip isn't working/installed (and your terminal allows paste):
-# cat > style.css
-# THEN paste the content (Shift + Ctrl + V), THEN press Ctrl + D (to signal end of input)
+@import url("/home/tanmay/.cache/wal/colors-waybar.css");
+
+* {
+  font-family: 'SF Pro Text', sans-serif;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: @background;
+  color: @color15;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  background-color: @background;
+  color: @color15;
+}
+
+#workspaces button.active {
+  color: @color15;
+  background-color: @color1;
+}
+
+#network, #bluetooth, #custom-audio, #battery, #cpu, #memory, #custom-clipboard, #clock {
+  padding: 0 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 4px;
+  color: @color15;
+}
+
+#network {
+  background-color: @color1;
+  color: @color15;
+}
+
+#custom-audio {
+  background-color: @color1;
+  color: @color15;
+  padding: 4px 8px;
+  border-radius: 6px;
+  margin: 2px 4px;
+}
+
+
+#bluetooth {
+  background-color: @color1;
+  color: @color15;
+}
+
+#battery {
+  background-color: @color1;
+  color: @color15;
+}
+
+#cpu {
+  background-color: @color1;
+  color: @color15;
+}
+
+#memory {
+  background-color: @color1;
+  color: @color15;
+}
+
+#custom-clipboard {
+  background-color: @color1;
+  color: @color15;
+}
+
+#clock {
+  background-color: @color1;
+  color: @color15;
+}
+
+
