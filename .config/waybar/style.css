@@ -1,9 +1,6 @@
 xclip -o > style.css
-# OR if xclip isn't installed:
-# If using Wayland:
+# OR if xclip isn't installed and you're on Wayland (like Hyprland):
 # wl-paste > style.css
-# If using Xorg and xclip isn't working:
-# gnome-terminal (or your terminal emulator) often allows pasting with Shift+Ctrl+V
-# In that case, you'd type:
+# OR if you're on Xorg and xclip isn't working/installed (and your terminal allows paste):
 # cat > style.css
-# THEN paste the content (Shift+Ctrl+V), THEN press Ctrl+D (to signal end of input)
+# THEN paste the content (Shift + Ctrl + V), THEN press Ctrl + D (to signal end of input)
