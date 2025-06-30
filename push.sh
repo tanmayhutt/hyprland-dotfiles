@@ -1,22 +1,9 @@
 #!/bin/bash
-
 echo "🧪 Pushing your riced-out dotfiles to GitHub, biatch..."
+cd ~/dotfiles || { echo "❌ dotfiles folder not found"; exit 1; }
 
-cd "$HOME/dotfiles" || {
-  echo "❌ Could not enter dotfiles directory"
-  exit 1
-}
-
-# Stage all tracked and untracked changes
 git add .
+git commit -m "📦 Auto update: $(date '+%Y-%m-%d %H:%M:%S')" 2>/dev/null && \
+echo "✅ Committed changes." || echo "🫠 Nothing to commit."
 
-# Commit with timestamp
-git commit -m "🔁 Dotfiles updated on $(date '+%Y-%m-%d %H:%M')" || {
-  echo "ℹ️ Nothing to commit."
-  exit 0
-}
-
-# Push via authenticated GitHub CLI
-git push
-
-echo "✅ GitHub updated. You’re cooking with 🔥 now."
+git push && echo "🚀 All pushed, Heisenberg style!" || echo "❌ Push failed."
