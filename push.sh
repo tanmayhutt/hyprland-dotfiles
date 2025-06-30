@@ -3,20 +3,18 @@
 echo "🧪 Pushing your riced-out dotfiles to GitHub, biatch..."
 
 cd "$HOME/dotfiles" || {
-  echo "❌ Could not enter dotfiles directory"
+  echo "❌ Failed to cd into ~/dotfiles"
   exit 1
 }
 
-# Stage everything you care about, including this script
-git add .config/hypr .config/hyprlock .config/waybar .zshrc .zprofile push.sh
+# Stage updated files only
+git add .config/hypr .config/waybar .config/hyprlock .zshrc .zprofile
 
-# Commit with timestamp
-git commit -m "🔁 Dotfiles updated on $(date '+%Y-%m-%d %H:%M')" || {
-  echo "ℹ️ Nothing to commit."
-  exit 0
-}
-
-# Push to GitHub
-git push
-
-echo "✅ GitHub updated. You’re cooking with 🔥 now."
+# Commit if there's anything to commit
+if ! git diff --cached --quiet; then
+  git commit -m "🔁 Dotfiles updated on $(date '+%Y-%m-%d %H:%M')"
+  git push
+  echo "✅ Dotfiles pushed, Jesse style!"
+else
+  echo "ℹ️ Nothing new to commit."
+fi
