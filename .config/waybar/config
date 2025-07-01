@@ -41,7 +41,7 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""],
-        "on-click": "xfce4-power-manager-settings"
+        "on-click": "~/.local/bin/power-toggle.sh"
     },
     "battery#bat2": {
         "bat": "BAT2"
