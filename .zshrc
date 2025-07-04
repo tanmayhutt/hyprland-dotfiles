@@ -128,4 +128,3 @@ precmd_functions+=(jesse_quote)
 
 #ai
 export OPENAI_API_KEY="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"
-
