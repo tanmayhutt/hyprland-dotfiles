@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#test
 echo "🧪 Deploying your riced-out dotfiles, biatch..."
 
 DOTFILES_DIR="$HOME/dotfiles"
