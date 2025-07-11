@@ -1,0 +1,49 @@
+@import ".cache/wal/colors-waybar.css";
+
+
+/* Transparent dark window with frosted glass blur */
+window {
+    background-color: rgba(20, 20, 20, 0.5);
+    color: @color10;
+    font-family: "Fira Code", monospace;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Input box styling */
+#input {
+    background-color: rgba(20, 20, 20, 0.5);
+    color: @color10;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Selected entry highlight */
+#entry:selected {
+    background-color: @background;
+    color: @color10;
+    border-radius: 20px;
+}
+
+/* Hover effect on entries */
+#entry:hover {
+    background-color: @background;
+    color: @color10;
+    border-radius: 8px;
+}
+
+/* Scrollbar styling */
+scrollbar {
+    background-color: @background;
+    border-radius: 6px;
+}
+
+scrollbar slider {
+    background-color: @color1;
+    border-radius: 6px;
+}

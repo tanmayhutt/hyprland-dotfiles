@@ -1,0 +1,8 @@
+show = drun
+prompt = Yo, search it!
+term = foot
+allow_images = true
+insensitive = true
+hide_scroll = false
+width = 600
+height = 400
