@@ -103,15 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
-export PATH=$PATH:~/.local/bin
-
-
-export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
-
-
-export PATH="$HOME/.local/bin:$PATH"
 
 
 
@@ -126,5 +119,7 @@ precmd_functions+=(jesse_quote)
 
 
 
-#ai
-export OPENAI_API_KEY="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"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export INPUT_METHOD=fcitx
