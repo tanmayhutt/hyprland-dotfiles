@@ -30,13 +30,13 @@ window#waybar {
 }
 
 #network {
-  background-color: @color1;
-  color: @color15;
+  background-color: @color2;
+  color: @background;
 }
 
 #custom-audio {
-  background-color: @color1;
-  color: @color15;
+  background-color: @color3;
+  color: @background;
   padding: 4px 8px;
   border-radius: 6px;
   margin: 2px 4px;
@@ -44,33 +44,33 @@ window#waybar {
 
 
 #bluetooth {
-  background-color: @color1;
-  color: @color15;
+  background-color: @color4;
+  color: @background;
 }
 
 #battery {
-  background-color: @color1;
-  color: @color15;
+  background-color: @color5;
+  color: @background;
 }
 
 #cpu {
-  background-color: @color1;
-  color: @color15;
+  background-color: @color6;
+  color: @background;
 }
 
 #memory {
-  background-color: @color1;
-  color: @color15;
+  background-color: @color7;
+  color: @background;
 }
 
 #custom-clipboard {
-  background-color: @color1;
-  color: @color15;
+  background-color: @color8;
+  color: @background;
 }
 
 #clock {
-  background-color: @color1;
-  color: @color15;
+  background-color: @color9;
+  color: @background;
 }
 
 

@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export FZF_DEFAULT_COMMAND="fd --type f"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -93,6 +94,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by Oh My Zsh libs,
 # plugins, and themes. Aliases can be placed here, though Oh My Zsh
+plugins=(git z sudo zsh-autosuggestions zsh-syntax-highlighting)
+
 # users are encouraged to define aliases within a top-level file in
 # the $ZSH_CUSTOM folder, with .zsh extension. Examples:
 # - $ZSH_CUSTOM/aliases.zsh
@@ -116,6 +119,8 @@ precmd_functions+=(jesse_quote)
 
 
 
+autoload -Uz compinit
+compinit
 
 
 
