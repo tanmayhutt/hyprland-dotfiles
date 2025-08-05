@@ -10,7 +10,7 @@
     "format-ethernet": "{ipaddr} ",
     "format-disconnected": "Disconnected   ⚠",
     "tooltip": false,
-    "on-click": "alacritty -e nmtui"
+    "on-click": "kitty -e nmtui"
   },
 
   "bluetooth": {
