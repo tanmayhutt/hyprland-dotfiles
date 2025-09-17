@@ -130,3 +130,9 @@ export XMODIFIERS=@im=fcitx
 export INPUT_METHOD=fcitx
 export LIBVA_DRIVER_NAME=iHD
 alias vlc="vlc --vout=opengl"
+
+
+# Reload last pywal theme on terminal start
+if [ -f ~/.cache/wal/colors.sh ]; then
+    wal -R
+fi
