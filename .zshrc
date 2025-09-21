@@ -136,3 +136,20 @@ alias vlc="vlc --vout=opengl"
 if [ -f ~/.cache/wal/colors.sh ]; then
     wal -R
 fi
+
+# fnm
+FNM_PATH="/home/tanmay/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+
+
+
+
+# fnm
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
