@@ -244,11 +244,13 @@ background = 'default'
 foreground = 'default'
 
 # From your pywal theme (lowkey classy BrBa vibe)
-gradient_color_1 = "#21A9CB" ; bright cyan
-gradient_color_2 = "#57B8D2" ; lighter cyan
-gradient_color_3 = "#6EB5C9" ; soft blue
-gradient_color_4 = "#ADB5B0" ; silver grey
-gradient_color_5 = "#E5D79C" ; bright yellow highlight
+
+gradient_color_1 = '#718579'
+gradient_color_2 = '#D59906'
+gradient_color_3 = '#07708A'
+gradient_color_4 = '#DC6791'
+gradient_color_5 = '#559495'
+
 
 [smoothing]
 
