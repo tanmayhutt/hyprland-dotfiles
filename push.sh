@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "Pushing ythe rice"
+echo "Pushing ythe rice..."
 cd ~/dotfiles || { echo "dotfiles folder not found"; exit 1; }
 
 git add .
