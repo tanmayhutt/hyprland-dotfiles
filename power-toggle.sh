@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Get current active profile without colon
 current=$(powerprofilesctl | grep '^\*' | cut -d ' ' -f2 | tr -d ':')
 
-# Cycle through the modes
 case "$current" in
   performance)
     powerprofilesctl set balanced
