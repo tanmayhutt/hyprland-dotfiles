@@ -16,17 +16,17 @@ Here’s a glimpse of the desktop environment in action:
 
 This configuration is built for a clean and efficient Linux experience:
 
-* [cite_start]**Window Manager**: `Hyprland` with dynamic tiling, featuring **10px inner gaps**, **15px outer gaps**, and **20px window rounding**[cite: 257, 258].
-* [cite_start]**Aesthetics**: System-wide theming via **Pywal**, with automatic reload on terminal startup[cite: 43].
-* [cite_start]**Terminal (Kitty)**: Uses a custom color scheme and displays system information using `neofetch` on launch[cite: 45].
-* [cite_start]**Shell (Zsh)**: Powered by Oh My Zsh, with essential plugins like `zsh-autosuggestions`, `zsh-syntax-highlighting`, `z`, and `sudo`[cite: 39].
-    * [cite_start]Includes a fun **"Jesse Pinkman" inspired welcome quote** (`jesse_quote`)[cite: 42].
-* [cite_start]**Visualizer (CAVA)**: Configured with custom shaders for visual effects, including `eye_of_phi.frag`, `northern_lights.frag`, and `winamp_line_style_spectrum.frag`[cite: 2].
-* [cite_start]**Application Launcher (Wofi)**: Styled as a **transparent dark window with frosted glass blur** and shadow [cite: 280-282]. [cite_start]It supports images and uses the prompt: `"Yo, search it!"`[cite: 279].
-* [cite_start]**Bar (Waybar)**: Configuration inherits colors from Pywal and includes specific module styling[cite: 272].
-* [cite_start]**Lockscreen (Hyprlock)**: Displays time, date, battery, network, and supports a profile picture [cite: 260-265].
-* [cite_start]**Platform Support**: Sets environment variables for Wayland (`QT_QPA_PLATFORM=wayland;xcb`) and input methods (`fcitx`)[cite: 19, 43].
-
+* **Window Manager**: `Hyprland` with dynamic tiling, featuring **10px inner gaps**, **15px outer gaps**, and **20px window rounding**.
+* **Aesthetics**: System-wide theming via **Pywal**, with automatic reload on terminal startup.
+* **Terminal (Kitty)**: Uses a custom color scheme and displays system information using `neofetch` on launch.
+* **Shell (Zsh)**: Powered by Oh My Zsh, with essential plugins like `zsh-autosuggestions`, `zsh-syntax-highlighting`, `z`, and `sudo`.
+    * Includes a fun **"Jesse Pinkman" inspired welcome quote** (`jesse_quote`).
+* **Visualizer (CAVA)**: Configured with custom shaders for visual effects, including `eye_of_phi.frag`, `northern_lights.frag`, and `winamp_line_style_spectrum.frag`.
+* **Application Launcher (Wofi)**: Styled as a **transparent dark window with frosted glass blur** and shadow. It supports images and uses the prompt: `"Yo, search it!"`.
+* **Bar (Waybar)**: Configuration inherits colors from Pywal and includes specific module styling.
+* **Lockscreen (Hyprlock)**: Displays time, date, battery, network, and supports a profile picture.
+* **Platform Support**: Sets environment variables for Wayland (`QT_QPA_PLATFORM=wayland;xcb`) and input methods (`fcitx`).
+  
 ---
 
 ## 📂 Repository Structure
