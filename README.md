@@ -72,12 +72,12 @@ The core files reside in the following directories:
 ## ⚙️ Helper Scripts
 
 * **`deploy.sh`**
-  Creates symbolic links for all configuration directories and Zsh files into your `$HOME` and `$HOME/.config`. [cite_start]This is the **one-command setup** after cloning[cite: 11].
+  Creates symbolic links for all configuration directories and Zsh files into your `$HOME` and `$HOME/.config`. This is the **one-command setup** after cloning.
   ```zsh
   ~/hyprland-dotfiles/deploy.sh
   ```
 * **`push.sh`**
-  Stages all files, commits with an automatic timestamped message ("Auto update:..."), and pushes changes to GitHub. The success message is "All pushed, Heisenberg style!".
+  Stages all files, commits with an automatic timestamped message (`Auto update:...`), and pushes changes to GitHub. The success message is `All pushed, Heisenberg style`.
   ```zsh
   ~/hyprland-dotfiles/push.sh
   ```
