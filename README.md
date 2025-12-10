@@ -20,7 +20,7 @@ This configuration is built for a clean and efficient Linux experience:
 * **Aesthetics**: System-wide theming via **Pywal**, with automatic reload on terminal startup.
 * **Terminal (Kitty)**: Uses a custom color scheme and displays system information using `neofetch` on launch.
 * **Shell (Zsh)**: Powered by Oh My Zsh, with essential plugins like `zsh-autosuggestions`, `zsh-syntax-highlighting`, `z`, and `sudo`.
-    * Includes a fun **"Jesse Pinkman" inspired welcome quote** (`jesse_quote`).
+    * Includes a fun **"Jesse Pinkman" inspired welcome quote** (`yo yo yo! 1 to the 3 to the 6 to the 9, representing the ABQ — what up, biatch?!`).
 * **Visualizer (CAVA)**: Configured with custom shaders for visual effects, including `eye_of_phi.frag`, `northern_lights.frag`, and `winamp_line_style_spectrum.frag`.
 * **Application Launcher (Wofi)**: Styled as a **transparent dark window with frosted glass blur** and shadow. It supports images and uses the prompt: `"Yo, search it!"`.
 * **Bar (Waybar)**: Configuration inherits colors from Pywal and includes specific module styling.
