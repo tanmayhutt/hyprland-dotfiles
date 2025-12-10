@@ -16,7 +16,7 @@ Here’s a glimpse of the desktop environment in action:
 
 This configuration is built for a clean and efficient Linux experience:
 
-* [cite_start]**Window Manager**: $\text{Hyprland}$ with dynamic tiling, featuring **10px inner gaps**, **15px outer gaps**, and **20px window rounding**[cite: 257, 258].
+* [cite_start]**Window Manager**: `Hyprland` with dynamic tiling, featuring **10px inner gaps**, **15px outer gaps**, and **20px window rounding**[cite: 257, 258].
 * [cite_start]**Aesthetics**: System-wide theming via **Pywal**, with automatic reload on terminal startup[cite: 43].
 * [cite_start]**Terminal (Kitty)**: Uses a custom color scheme and displays system information using `neofetch` on launch[cite: 45].
 * [cite_start]**Shell (Zsh)**: Powered by Oh My Zsh, with essential plugins like `zsh-autosuggestions`, `zsh-syntax-highlighting`, `z`, and `sudo`[cite: 39].
@@ -50,6 +50,8 @@ The core files reside in the following directories:
         └── wofi/               # App launcher config and style.css
 ```
 
+---
+
 ## 🗝️ Key Bindings
 
 | Action | Key Binding | Command / Details |
@@ -64,7 +66,6 @@ The core files reside in the following directories:
 | **Suspend** | `Super` + `Esc` | `systemctl suspend` |
 | **Full Screenshot** | `Print` | `grim` (to file & clipboard) |
 | **Region Screenshot** | `Shift` + `Print` | `grim -g "$(slurp)"` (to file & clipboard) |
-
 
 ---
 
@@ -85,6 +86,8 @@ The core files reside in the following directories:
   ```zsh
   ~/hyprland-dotfiles/power-toggle.sh
   ```
+
+---
 
 
 ## 🛠️ Installation
