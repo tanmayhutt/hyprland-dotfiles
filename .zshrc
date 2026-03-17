@@ -115,6 +115,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 function jesse_quote() {
   echo "\033[38;2;223;236;224m🧪 Jesse:\033[0m yo yo yo! 1 to the 3 to the 6 to the 9, representing the ABQ — what up, biatch?!"
 }
+
 precmd_functions+=(jesse_quote)
 
 
@@ -175,3 +176,6 @@ alias java8='sudo archlinux-java set java-8-openjdk && echo "☕ Switched to Jav
 alias java25='sudo archlinux-java set java-25-openjdk && echo "🚀 Switched to Java 25 (for builds)"'
 
 alias sdkman8='JAVA_HOME=/usr/lib/jvm/java-8-openjdk PATH=$JAVA_HOME/bin:$PATH sdkmanager'
+
+
+wal -i /home/tanmay/Downloads/wallpaper.png
