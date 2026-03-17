@@ -155,3 +155,23 @@ if [ -d "$FNM_PATH" ]; then
 fi
 
 neofetch
+
+
+
+# 🟢 Java 25 (default for builds, React Native, etc.)
+export JAVA_HOME=/usr/lib/jvm/java-25-openjdk
+export PATH=$PATH:$JAVA_HOME/bin
+
+# 🟢 Android SDK paths
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+
+# 🟢 Quick Java version switchers (optional)
+alias java8='sudo archlinux-java set java-8-openjdk && echo "☕ Switched to Java 8 (for sdkmanager)"'
+alias java25='sudo archlinux-java set java-25-openjdk && echo "🚀 Switched to Java 25 (for builds)"'
+
+alias sdkman8='JAVA_HOME=/usr/lib/jvm/java-8-openjdk PATH=$JAVA_HOME/bin:$PATH sdkmanager'
