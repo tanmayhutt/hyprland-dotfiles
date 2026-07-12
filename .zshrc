@@ -133,6 +133,9 @@ export LIBVA_DRIVER_NAME=iHD
 alias vlc="vlc --vout=opengl"
 
 
+#theme
+alias theme='wal -i ~/Downloads/wallpaper.png'
+
 # Reload last pywal theme on terminal start
 if [ -f ~/.cache/wal/colors.sh ]; then
     wal -R
@@ -178,4 +181,3 @@ alias java25='sudo archlinux-java set java-25-openjdk && echo "🚀 Switched to 
 alias sdkman8='JAVA_HOME=/usr/lib/jvm/java-8-openjdk PATH=$JAVA_HOME/bin:$PATH sdkmanager'
 
 
-wal -i /home/tanmay/Downloads/wallpaper.png
