@@ -15,3 +15,4 @@ ln -sf "$DOTFILES_DIR/.zprofile" "$HOME/.zprofile"
 ln -sf "$DOTFILES_DIR/power-toggle.sh" "$HOME/.local/bin/power-toggle.sh"
 
 echo "All set, You're riced."
+ln -sf "$DOTFILES_DIR/.config/yazi" "$HOME/.config/yazi"

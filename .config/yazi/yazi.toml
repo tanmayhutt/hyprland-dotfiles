@@ -1,0 +1,11 @@
+[preview]
+image_quality = 50
+max_width = 300
+max_height = 300
+
+[plugin]
+prepend_previewers = [
+  { mime = "image/png",  run = "image" },
+  { mime = "image/jpeg", run = "image" },
+  { mime = "image/webp", run = "image" },
+]
