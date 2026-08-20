@@ -1,12 +1,10 @@
-# ⚡ TanmayHutt's Hyprland Dotfiles 🧪
+# ⚡ TanmayHutt's Hyprland Dotfiles
 
-My personal, high-performance **Hyprland** and **Zsh** configuration setup, tuned for **Arch Linux**. This repository is focused on speed, aesthetics, and a powerful, keyboard-driven workflow.
+My personal, high-performance **Hyprland** and **Zsh** configuration, tuned for **Arch Linux**. Built for speed, aesthetics, and a powerful, keyboard-driven workflow.
 
 ---
 
 ## 📸 Showcase
-
-Here’s a glimpse of the desktop environment in action:
 
 ![Hyprland Preview](hyprland.png)
 
@@ -14,94 +12,82 @@ Here’s a glimpse of the desktop environment in action:
 
 ## ✨ Features & Highlights
 
-This configuration is built for a clean and efficient Linux experience:
+* **Window Manager**: `Hyprland` with dynamic tiling — **10px inner gaps**, **15px outer gaps**, **20px window rounding**.
+* **Aesthetics**: System-wide theming via **Pywal** (`wal -R` on every shell start). Set a new theme anytime with `theme`.
+* **Terminal**: `Kitty` — GPU-accelerated, uses Pywal colors. Displays system info via `fastfetch` on launch.
+* **Shell**: `Zsh` + Oh My Zsh with `zsh-autosuggestions`, `zsh-syntax-highlighting`, `z`, and `sudo` plugins.
+* **Visualizer**: `CAVA` with custom shaders (`eye_of_phi.frag`, `northern_lights.frag`, `winamp_line_style_spectrum.frag`).
+* **App Launcher**: `Wofi` — transparent dark window with frosted glass blur and shadow. Prompt: `"Yo, search it!"`.
+* **Bar**: `Waybar` — colors inherit from Pywal.
+* **Lockscreen**: `Hyprlock` — shows time, date, battery, network, profile picture.
+* **Platform**: Wayland env vars set (`QT_QPA_PLATFORM=wayland;xcb`) + `fcitx` input method.
 
-* **Window Manager**: `Hyprland` with dynamic tiling, featuring **10px inner gaps**, **15px outer gaps**, and **20px window rounding**.
-* **Aesthetics**: System-wide theming via **Pywal**, with automatic reload on terminal startup.
-* **Terminal (Kitty)**: Uses a custom color scheme and displays system information using `neofetch` on launch.
-* **Shell (Zsh)**: Powered by Oh My Zsh, with essential plugins like `zsh-autosuggestions`, `zsh-syntax-highlighting`, `z`, and `sudo`.
-    * Includes a fun **"Jesse Pinkman" inspired welcome quote** (`yo yo yo! 1 to the 3 to the 6 to the 9, representing the ABQ — what up, biatch?!`).
-* **Visualizer (CAVA)**: Configured with custom shaders for visual effects, including `eye_of_phi.frag`, `northern_lights.frag`, and `winamp_line_style_spectrum.frag`.
-* **Application Launcher (Wofi)**: Styled as a **transparent dark window with frosted glass blur** and shadow. It supports images and uses the prompt: `"Yo, search it!"`.
-* **Bar (Waybar)**: Configuration inherits colors from Pywal and includes specific module styling.
-* **Lockscreen (Hyprlock)**: Displays time, date, battery, network, and supports a profile picture.
-* **Platform Support**: Sets environment variables for Wayland (`QT_QPA_PLATFORM=wayland;xcb`) and input methods (`fcitx`).
-  
 ---
 
 ## 📂 Repository Structure
 
-The core files reside in the following directories:
-
 ```text
-└── tanmayhutt-hyprland-dotfiles/
-    ├── README.md
-    ├── deploy.sh               # The quick setup script
-    ├── power-toggle.sh         # Custom power profile cycler script
-    ├── push.sh                 # Git auto-commit/push helper
-    ├── .zprofile               # Zsh login shell (Hyprland startup on TTY1)
-    ├── .zshrc                  # Zsh interactive shell config, plugins, and aliases
-    └── .config/
-        ├── cava/               # CAVA config, themes (solarized_dark, tricolor), and shaders
-        ├── hypr/               # Primary Hyprland config files, keybinds.conf, brightness-volume.sh, hyprpaper.conf
-        ├── hyprlock/           # Lock screen configuration (hyprlock.conf)
-        ├── kitty/              # Kitty terminal config (kitty.conf)
-        ├── waybar/             # Status bar config and style.css
-        └── wofi/               # App launcher config and style.css
+hyprland-dotfiles/
+├── README.md
+├── deploy.sh               # Symlink all configs to ~/.config
+├── push.sh                 # Git auto-commit/push helper
+├── power-toggle.sh         # Custom power profile cycler
+├── .zprofile               # Zsh login shell (auto-starts Hyprland on TTY1)
+├── .zshrc                  # Zsh interactive shell config
+└── .config/
+    ├── hypr/               # Hyprland compositor config
+    ├── waybar/             # Status bar config + Pywal styling
+    ├── wofi/               # App launcher styling
+    ├── kitty/              # Terminal emulator config
+    ├── hyprlock/           # Lockscreen config
+    └── cava/               # Audio visualizer + shaders
 ```
 
 ---
 
-## 🗝️ Key Bindings
+## 🚀 Deployment
 
-| Action | Key Binding | Command / Details |
-| :--- | :--- | :--- |
-| **Terminal** | `Super` + `T` | `kitty` |
-| **App Launcher** | `Super` + `A` | `wofi --show drun` |
-| **File Manager** | `Super` + `E` | `thunar` |
-| **Browser** | `Super` + `B` | `brave` |
-| **Kill Window** | `Super` + `Q` | `killactive` |
-| **Lock Screen** | `Super` + `L` | `hyprlock` |
-| **System Monitor** | `Super` + `M` | `foot btop` |
-| **Suspend** | `Super` + `Esc` | `systemctl suspend` |
-| **Full Screenshot** | `Print` | `grim` (to file & clipboard) |
-| **Region Screenshot** | `Shift` + `Print` | `grim -g "$(slurp)"` (to file & clipboard) |
+```bash
+git clone https://github.com/tanmayhutt/hyprland-dotfiles
+cd hyprland-dotfiles
+bash deploy.sh
+```
+
+`deploy.sh` symlinks all configs into `~/.config` so updates to the repo are reflected instantly.
 
 ---
 
-## ⚙️ Helper Scripts
+## ⌨️ Key Bindings
 
-* **`deploy.sh`**
-  Creates symbolic links for all configuration directories and Zsh files into your `$HOME` and `$HOME/.config`. This is the **one-command setup** after cloning.
-  ```zsh
-  ~/hyprland-dotfiles/deploy.sh
-  ```
-* **`push.sh`**
-  Stages all files, commits with an automatic timestamped message (`Auto update:...`), and pushes changes to GitHub. The success message is `All pushed, Heisenberg style`.
-  ```zsh
-  ~/hyprland-dotfiles/push.sh
-  ```
-* **`power-toggle.sh`**
-  Cycles the system power profile using powerprofilesctl between performance, balanced, and power-saver. A desktop notification is sent on every switch.
-  ```zsh
-  ~/hyprland-dotfiles/power-toggle.sh
-  ```
+| Key | Action |
+|-----|--------|
+| `Super + T` | Open terminal (kitty) |
+| `Super + A` | App launcher (wofi) |
+| `Super + E` | File manager |
+| `Super + B` | Browser (brave) |
+| `Super + Q` | Kill active window |
+| `Super + L` | Lock screen (hyprlock) |
+| `Print` | Screenshot (grim) |
 
 ---
 
+## 🎨 Theming
 
-## 🛠️ Installation
+Pywal generates a color scheme from your wallpaper and applies it system-wide (terminal, Waybar, GTK).
 
-1. **`Backup:`** It is highly recommended to back up your existing configuration files (important!).
-2. **`Clone:`** Clone the repository to your home directory:
-   ```zsh
-   git clone [https://github.com/tanmayhutt/hyprland-dotfiles.git](https://github.com/tanmayhutt/hyprland-dotfiles.git)
-   ```
-3. **`Deploy:`** Run the deployment script to set up the symbolic links:
-   ```zsh
-   ~/hyprland-dotfiles/deploy.sh
-   ```
-4. **`Reload:`** Log out and log back into $\text{Hyprland}$ to apply all the new configurations. 
+```bash
+# Set theme from wallpaper
+theme
 
+# Or manually
+wal -i ~/Downloads/wallpaper.png
+```
 
+Colors reload automatically on every new shell via `wal -R` in `.zshrc`.
 
+---
+
+## 📝 Notes
+
+- This machine now runs headless as a server — Hyprland config is preserved but the desktop is dormant. See [arch-server](https://github.com/tanmayhutt/arch-server) for the server setup.
+- `fastfetch` replaced `neofetch` for system info display.
