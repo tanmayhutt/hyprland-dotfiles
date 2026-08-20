@@ -1,30 +1,30 @@
-# ⚡ TanmayHutt's Hyprland Dotfiles
+# TanmayHutt's Hyprland Dotfiles
 
-My personal, high-performance **Hyprland** and **Zsh** configuration, tuned for **Arch Linux**. Built for speed, aesthetics, and a powerful, keyboard-driven workflow.
+My personal Hyprland and Zsh configuration for Arch Linux. Built for speed, aesthetics, and a keyboard-driven workflow.
 
 ---
 
-## 📸 Showcase
+## Showcase
 
 ![Hyprland Preview](hyprland.png)
 
 ---
 
-## ✨ Features & Highlights
+## Features & Highlights
 
-* **Window Manager**: `Hyprland` with dynamic tiling — **10px inner gaps**, **15px outer gaps**, **20px window rounding**.
-* **Aesthetics**: System-wide theming via **Pywal** (`wal -R` on every shell start). Set a new theme anytime with `theme`.
-* **Terminal**: `Kitty` — GPU-accelerated, uses Pywal colors. Displays system info via `fastfetch` on launch.
-* **Shell**: `Zsh` + Oh My Zsh with `zsh-autosuggestions`, `zsh-syntax-highlighting`, `z`, and `sudo` plugins.
-* **Visualizer**: `CAVA` with custom shaders (`eye_of_phi.frag`, `northern_lights.frag`, `winamp_line_style_spectrum.frag`).
-* **App Launcher**: `Wofi` — transparent dark window with frosted glass blur and shadow. Prompt: `"Yo, search it!"`.
-* **Bar**: `Waybar` — colors inherit from Pywal.
-* **Lockscreen**: `Hyprlock` — shows time, date, battery, network, profile picture.
-* **Platform**: Wayland env vars set (`QT_QPA_PLATFORM=wayland;xcb`) + `fcitx` input method.
+- **Window Manager**: Hyprland with dynamic tiling — 10px inner gaps, 15px outer gaps, 20px window rounding.
+- **Aesthetics**: System-wide theming via Pywal (`wal -R` on every shell start). Set a new theme anytime with `theme`.
+- **Terminal**: Kitty — GPU-accelerated, Pywal colors. Displays system info via `fastfetch` on launch.
+- **Shell**: Zsh + Oh My Zsh with `zsh-autosuggestions`, `zsh-syntax-highlighting`, `z`, and `sudo` plugins.
+- **Visualizer**: CAVA with custom shaders (`eye_of_phi.frag`, `northern_lights.frag`, `winamp_line_style_spectrum.frag`).
+- **App Launcher**: Wofi — transparent dark window with frosted glass blur and shadow.
+- **Bar**: Waybar — colors inherit from Pywal.
+- **Lockscreen**: Hyprlock — shows time, date, battery, network, profile picture.
+- **Platform**: Wayland env vars set (`QT_QPA_PLATFORM=wayland;xcb`) + fcitx input method.
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 hyprland-dotfiles/
@@ -45,7 +45,7 @@ hyprland-dotfiles/
 
 ---
 
-## 🚀 Deployment
+## Deployment
 
 ```bash
 git clone https://github.com/tanmayhutt/hyprland-dotfiles
@@ -57,7 +57,7 @@ bash deploy.sh
 
 ---
 
-## ⌨️ Key Bindings
+## Key Bindings
 
 | Key | Action |
 |-----|--------|
@@ -71,7 +71,7 @@ bash deploy.sh
 
 ---
 
-## 🎨 Theming
+## Theming
 
 Pywal generates a color scheme from your wallpaper and applies it system-wide (terminal, Waybar, GTK).
 
@@ -87,7 +87,7 @@ Colors reload automatically on every new shell via `wal -R` in `.zshrc`.
 
 ---
 
-## 📝 Notes
+## Notes
 
 - This machine now runs headless as a server — Hyprland config is preserved but the desktop is dormant. See [arch-server](https://github.com/tanmayhutt/arch-server) for the server setup.
 - `fastfetch` replaced `neofetch` for system info display.
