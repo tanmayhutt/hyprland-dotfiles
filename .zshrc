@@ -33,20 +33,13 @@ export LIBVA_DRIVER_NAME=iHD
 # theme
 alias theme='wal -i "$HOME/Downloads/wallpaper.png"'
 
-# Restore Pywal only inside the graphical Hyprland session.
-# Do not run graphical reload commands over SSH.
-if [[ -n "$HYPRLAND_INSTANCE_SIGNATURE" && -z "$SSH_CONNECTION" ]]; then
-    if [[ -f "$HOME/.cache/wal/colors.sh" ]]; then
-        wal -R
-    fi
+# Apply Pywal colors to the terminal
+if [[ -f "$HOME/.cache/wal/sequences" ]]; then
+    cat "$HOME/.cache/wal/sequences"
 fi
 
-# Show a compact machine summary once when opening an interactive shell.
-if [[ -n "$SSH_CONNECTION" ]]; then
-    fastfetch --logo none
-else
-    fastfetch
-fi
+# Show machine summary with logo
+fastfetch
 
 
 # Added by Antigravity CLI installer
