@@ -38,6 +38,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("xdg-desktop-portal-hyprland")
     hl.exec_cmd("fcitx5")
     hl.exec_cmd("hyprlock --config ~/.config/hyprlock/hyprlock.conf")
+    hl.exec_cmd("sh -c 'while true; do sleep 3; if ! grep -q \"^connected\" /sys/class/drm/card*-HDMI-*/status 2>/dev/null; then hyprctl dispatch exit; break; fi; done'")
 end)
 
 hl.config({
