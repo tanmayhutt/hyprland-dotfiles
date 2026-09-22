@@ -1,0 +1,69 @@
+# Clean, modern Starship configuration
+add_newline = true
+
+format = """
+$username$hostname$directory$git_branch$git_status$nodejs$python$rust$docker_context$cmd_duration
+$character"""
+
+[username]
+show_always = true
+style_user = "bold cyan"
+style_root = "bold red"
+format = "[$user]($style) "
+
+[hostname]
+ssh_only = false
+style = "bold dimmed white"
+format = "at [🌐 $hostname]($style) "
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+style = "bold blue"
+format = "in [$path]($style) "
+read_only = " 󰌾"
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "bold red"
+format = "([$all_status$ahead_behind]($style) )"
+conflicted = "🏳 "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+untracked = "? "
+modified = "! "
+staged = "+ "
+deleted = "✘ "
+
+[nodejs]
+symbol = "󰎙 "
+style = "bold green"
+format = "via [$symbol($version )]($style)"
+
+[python]
+symbol = "󰌠 "
+style = "bold yellow"
+format = "via [${symbol}${pyenv_prefix}(${version} )]($style)"
+
+[rust]
+symbol = "󱘗 "
+style = "bold red"
+format = "via [$symbol($version )]($style)"
+
+[docker_context]
+symbol = "󰡨 "
+style = "bold blue"
+format = "via [$symbol$context]($style) "
+
+[cmd_duration]
+min_time = 2000
+style = "bold yellow"
+format = "took [$duration]($style) "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"

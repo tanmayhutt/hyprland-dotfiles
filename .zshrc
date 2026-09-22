@@ -44,3 +44,4 @@ fastfetch
 
 # Added by Antigravity CLI installer
 export PATH="/home/tanmay/.local/bin:$PATH"
+eval "$(starship init zsh)"
